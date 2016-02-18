@@ -53,7 +53,7 @@ node default {
 file { "motd" :
   path => "/etc/motd",
   ensure => file,
-  owner => 'root",
+  owner => 'root',
   group => 'root',
   mode => '0644',
   content => "This is MOTD from github\n",
