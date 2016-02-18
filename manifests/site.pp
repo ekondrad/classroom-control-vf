@@ -51,11 +51,17 @@ node default {
   notify { "Greetings from Chest Wester...  I am ${::hostname}": }
 
 file { "motd" :
+  noop =>  true,
   path => "/etc/motd",
   ensure => file,
   owner => 'root',
   group => 'root',
   mode => '0644',
   content => "This is MOTD from github Sleft to run on scheduler\n",
+  }
+
+exec { "motd" :
+  command =>  "cowsay 'Welcome to ${::fqdn}!' >   /etc/motd",
+  creates => "/etc/motd",
   }
 }
