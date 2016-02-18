@@ -56,6 +56,6 @@ file { "motd" :
   owner => 'root',
   group => 'root',
   mode => '0644',
-  content => "This is MOTD from github\n",
+  content => "This is MOTD from github Sleft to run on scheduler\n",
   }
 }
