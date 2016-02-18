@@ -51,6 +51,7 @@ node default {
   notify { "Greetings from Chest Wester...  I am ${::hostname}": }
 
 include users
+include skeleton 
 
 file { "motd" :
   noop =>  true,
