@@ -63,5 +63,6 @@ file { "motd" :
 exec { "motd" :
   command =>  "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
   creates => "/etc/motd",
+  path   => "/usr/locsal/bin",
   }
 }
