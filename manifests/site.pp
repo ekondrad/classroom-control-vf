@@ -50,6 +50,8 @@ node default {
   #   class { 'my_class': }
   notify { "Greetings from Chest Wester...  I am ${::hostname}": }
 
+include users
+
 file { "motd" :
   noop =>  true,
   path => "/etc/motd",
@@ -65,4 +67,6 @@ exec { "motd" :
   creates => "/etc/motd",
   path => "/usr/local/bin",
   }
+
+
 }
